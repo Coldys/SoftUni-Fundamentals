@@ -83,7 +83,6 @@ for i in range(len(matrix)):
                     maze.add_edge(matrix[i][j], matrix[i - 1][j])
 
 longest_path = 0
-
 for end_node in end_nodes:
     paths = maze.find_path(0, end_node)
     for path in paths:
