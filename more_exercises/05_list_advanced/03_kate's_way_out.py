@@ -1,3 +1,4 @@
+""" 03. Kate's Way Out """
 from collections import defaultdict
 
 
@@ -19,10 +20,10 @@ class MazeGraph:
         self.paths = []
         self.path = []
         is_visited = [False] * (self.nodes + 1)
-        self.find_all_pats(start, end, is_visited)
+        self.find_all_paths(start, end, is_visited)
         return self.paths
 
-    def find_all_pats(self, start, end, is_visited):
+    def find_all_paths(self, start, end, is_visited):
 
         is_visited[start] = True
         self.path.append(start)
@@ -31,7 +32,7 @@ class MazeGraph:
         else:
             for i in self.edges[start]:
                 if is_visited[i] is False:
-                    self.find_all_pats(i, end, is_visited)
+                    self.find_all_paths(i, end, is_visited)
 
         self.path.pop()
         is_visited[start] = False
