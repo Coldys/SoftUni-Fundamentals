@@ -31,3 +31,4 @@ while True:
     print(destinations)
 
 print(f"Ready for world tour! Planned stops: {destinations}")
+
